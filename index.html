@@ -12,7 +12,11 @@
 </head>
 
 <body>
-  <img class="bg-img" src="assets/images/background-pattern-mobile.svg" alt="">
+  <picture>
+    <source srcset="assets/images/background-pattern-mobile.svg" media="(max-width: 885px)">
+    <source srcset="assets/images/background-pattern-desktop.svg" media="(min-width: 886px)">
+    <!-- <img class="bg-img" src="assets/images/background-pattern-mobile.svg" alt="Img"> -->
+  </picture>
   <div class="container">
     <div class="header flex-row">
       <img src="assets/images/icon-star.svg" alt="Star Icon">

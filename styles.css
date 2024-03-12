@@ -95,20 +95,19 @@ body {
     background-color: var(--pink);
 }
 
-.bg-img {
+/* .bg-img {
     position: absolute;
     top: 0;
     left: 0;
     z-index: -1;
-    min-width: 100%;
 }
 
-@media screen and (min-width: 600px) {
+@media screen and (min-width: 885px) {
     .bg-img {
-        content: url(assets/images/background-pattern-desktop.svg);
-        min-width: auto;
+        content: url("assets/images/background-pattern-desktop.svg");
+        min-width: 100%;
     }
-}
+} */
 
 .container {
     background-color: var(--white);
@@ -183,13 +182,14 @@ Helper Classes
 
 .subtitle {
     align-self: center;
-    
+
     font-weight: var(--fw-semi-bold);
     line-height: 1.2rem;
 }
 
 .text {
     color: var(--gray-purple);
+    max-width: 50ch;
 }
 
 .flex-row {
