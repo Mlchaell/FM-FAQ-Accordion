@@ -95,26 +95,33 @@ body {
     background-color: var(--pink);
 }
 
-/* .bg-img {
+.bg-img {
     position: absolute;
     top: 0;
     left: 0;
     z-index: -1;
+    min-width: 100%;
 }
 
-@media screen and (min-width: 885px) {
+@media screen and (min-width: 446px) {
+    .bg-img {
+        max-height: 20rem;
+        object-fit: cover;
+    }
+}
+
+@media screen and (min-width: 900px) {
     .bg-img {
         content: url("assets/images/background-pattern-desktop.svg");
         min-width: 100%;
     }
-} */
+}
 
 .container {
     background-color: var(--white);
     border-radius: 1rem;
     padding: 1rem;
-    min-width: 20rem;
-    max-width: 50rem;
+    max-width: 80%;
     margin: 0 auto;
 }
 
@@ -140,33 +147,42 @@ body {
     display: flex;
     flex-direction: column;
     gap: 1.2rem;
+    max-width: 25rem;
 }
 
-.question .flex-row {
-    justify-content: space-between;
-}
-
-.question__title {
-    max-width: 25ch;
-}
-
-@media screen and (min-width: 450px) {
-    .question__title {
-        max-width: 35ch;
-    }
-}
-
-@media screen and (min-width: 550px) {
-    .question__title {
-        max-width: fit-content;
-    }
-}
-
-.question img {
+.disclosure__button {
     align-self: center;
 
+    border: none;
+    background-color: transparent;
     cursor: pointer;
-    min-width: 1rem;
+    margin-left: 1rem;
+}
+
+.disclosure__button[aria-expanded="false"]
++ .disclosure__content {
+    display: none;
+}
+
+.disclosure__button[aria-expanded="false"]
+> .closeBtn {
+    display: none;
+}
+
+.disclosure__button[aria-expanded="true"]
++ .disclosure__content {
+    display: block;
+}
+
+.disclosure__button[aria-expanded="true"]
+> .closeBtn {
+    display: block;
+    transform: translateY(200%);
+}
+
+.disclosure__button[aria-expanded="true"]
+> .openBtn {
+    display: none;
 }
 
 /* 
@@ -189,13 +205,11 @@ Helper Classes
 
 .text {
     color: var(--gray-purple);
-    max-width: 50ch;
+    max-width: 90%;
 }
 
-.flex-row {
-    display: flex;
-}
-
-.hidden {
-    display: none;
+.question__grid {
+    display: grid;
+    grid-template-columns: 80% 10%;
+    row-gap: 1rem;
 }

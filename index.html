@@ -12,11 +12,17 @@
 </head>
 
 <body>
+  <style>
+    [data-state="no-js"] .disclosure__content {
+      display: none;
+    }
+  </style>
+
   <picture>
-    <source srcset="assets/images/background-pattern-mobile.svg" media="(max-width: 885px)">
-    <source srcset="assets/images/background-pattern-desktop.svg" media="(min-width: 886px)">
-    <!-- <img class="bg-img" src="assets/images/background-pattern-mobile.svg" alt="Img"> -->
+    <source media="(min-width: 900px)" srcset="assets/images/background-pattern-desktop.svg">
+    <img class="bg-img" src="assets/images/background-pattern-mobile.svg" alt="Img">
   </picture>
+
   <div class="container">
     <div class="header flex-row">
       <img src="assets/images/icon-star.svg" alt="Star Icon">
@@ -24,55 +30,81 @@
     </div>
 
     <div class="questions">
-      <div class="question question1">
-        <div class="flex-row">
+      <div class="question">
+        <div class="question__grid js-disclosure" data-state="no-js">
           <p class="question__title subtitle">What is Frontend Mentor, and how will it help me?</p>
-          <img class="openBtn" src="assets/images/icon-plus.svg" alt="Plus Icon">
-          <img class="closeBtn hidden" src="assets/images/icon-minus.svg" alt="Plus Icon">
+          <button class="disclosure__button js-disclosure-btn" aria-expanded="false" aria-controls="content" disabled title="Waiting for JS to load">
+            <svg class="openBtn" xmlns="http://www.w3.org/2000/svg" width="30" height="31" fill="none" viewBox="0 0 30 31"><path fill="#AD28EB" d="M15 3.313A12.187 12.187 0 1 0 27.188 15.5 12.203 12.203 0 0 0 15 3.312Zm4.688 13.124h-3.75v3.75a.938.938 0 0 1-1.876 0v-3.75h-3.75a.938.938 0 0 1 0-1.875h3.75v-3.75a.938.938 0 0 1 1.876 0v3.75h3.75a.938.938 0 0 1 0 1.876Z"/></svg>
+            <svg class="closeBtn" xmlns="http://www.w3.org/2000/svg" width="30" height="31" fill="none" viewBox="0 0 30 31"><path fill="#301534" d="M15 3.313A12.187 12.187 0 1 0 27.188 15.5 12.2 12.2 0 0 0 15 3.312Zm4.688 13.124h-9.375a.938.938 0 0 1 0-1.875h9.374a.938.938 0 0 1 0 1.876Z"/></svg>
+          </button>
+
+          <div class="disclosure__content" id="content">
+            <p>Frontend Mentor offers realistic coding challenges to help developers improve their
+              frontend coding skills with projects in HTML, CSS, and JavaScript. It's suitable for
+              all levels and ideal for portfolio building.</p>
+          </div>  
         </div>
-        <p class="text hidden">Frontend Mentor offers realistic coding challenges to help developers improve their
-          frontend coding skills with projects in HTML, CSS, and JavaScript. It's suitable for
-          all levels and ideal for portfolio building.</p>
+
         <div class="line"></div>
       </div>
 
-      <div class="question question2">
-        <div class="flex-row">
+      <div class="question">
+        <div class="question__grid js-disclosure" data-state="no-js">
           <p class="question__title subtitle">Is Frontend Mentor free?</p>
-          <img class="openBtn" src="assets/images/icon-plus.svg" alt="Plus Icon">
-          <img class="closeBtn hidden" src="assets/images/icon-minus.svg" alt="Plus Icon">
+          <button class="disclosure__button js-disclosure-btn" aria-expanded="false" aria-controls="content" disabled title="Waiting for JS to load"><span><svg xmlns="http://www.w3.org/2000/svg" width="30" height="31" fill="none" viewBox="0 0 30 31"> <path fill="#AD28EB" d="M15 3.313A12.187 12.187 0 1 0 27.188 15.5 12.203 12.203 0 0 0 15 3.312Zm4.688 13.124h-3.75v3.75a.938.938 0 0 1-1.876 0v-3.75h-3.75a.938.938 0 0 1 0-1.875h3.75v-3.75a.938.938 0 0 1 1.876 0v3.75h3.75a.938.938 0 0 1 0 1.876Z" /> </svg></button>
+          <!-- <button class="disclosure__button-close"><svg xmlns="http://www.w3.org/2000/svg" width="30" height="31" fill="none" viewBox="0 0 30 31"> <path fill="#301534" d="M15 3.313A12.187 12.187 0 1 0 27.188 15.5 12.2 12.2 0 0 0 15 3.312Zm4.688 13.124h-9.375a.938.938 0 0 1 0-1.875h9.374a.938.938 0 0 1 0 1.876Z" /></svg></button> -->
+
+          <div class="disclosure__content" id="content">
+            <p>Frontend Mentor offers realistic coding challenges to help developers improve their
+              frontend coding skills with projects in HTML, CSS, and JavaScript. It's suitable for
+              all levels and ideal for portfolio building.</p>
+          </div>  
         </div>
-        <p class="text hidden">Frontend Mentor offers realistic coding challenges to help developers improve their
-          frontend coding skills with projects in HTML, CSS, and JavaScript. It's suitable for
-          all levels and ideal for portfolio building.</p>
+
         <div class="line"></div>
       </div>
 
-      <div class="question question3">
-        <div class="flex-row">
+      <div class="question">
+        <div class="question__grid js-disclosure" data-state="no-js">
           <p class="question__title subtitle">Can I use Frontend Mentor projects in my portfolio?</p>
-          <img class="openBtn" src="assets/images/icon-plus.svg" alt="Plus Icon">
-          <img class="closeBtn hidden" src="assets/images/icon-minus.svg" alt="Plus Icon">
+          <button class="disclosure__button js-disclosure-btn" aria-expanded="false" aria-controls="content" disabled title="Waiting for JS to load"><span><svg xmlns="http://www.w3.org/2000/svg" width="30" height="31" fill="none" viewBox="0 0 30 31"> <path fill="#AD28EB" d="M15 3.313A12.187 12.187 0 1 0 27.188 15.5 12.203 12.203 0 0 0 15 3.312Zm4.688 13.124h-3.75v3.75a.938.938 0 0 1-1.876 0v-3.75h-3.75a.938.938 0 0 1 0-1.875h3.75v-3.75a.938.938 0 0 1 1.876 0v3.75h3.75a.938.938 0 0 1 0 1.876Z" /> </svg></button>
+          <!-- <button class="disclosure__button-close"><svg xmlns="http://www.w3.org/2000/svg" width="30" height="31" fill="none" viewBox="0 0 30 31"> <path fill="#301534" d="M15 3.313A12.187 12.187 0 1 0 27.188 15.5 12.2 12.2 0 0 0 15 3.312Zm4.688 13.124h-9.375a.938.938 0 0 1 0-1.875h9.374a.938.938 0 0 1 0 1.876Z" /></svg></button> -->
+
+          <div class="disclosure__content" id="content">
+            <p>Frontend Mentor offers realistic coding challenges to help developers improve their
+              frontend coding skills with projects in HTML, CSS, and JavaScript. It's suitable for
+              all levels and ideal for portfolio building.</p>
+          </div>  
         </div>
-        <p class="text hidden">Frontend Mentor offers realistic coding challenges to help developers improve their
-          frontend coding skills with projects in HTML, CSS, and JavaScript. It's suitable for
-          all levels and ideal for portfolio building.</p>
+
         <div class="line"></div>
       </div>
 
-      <div class="question question4">
-        <div class="flex-row">
+      <div class="question">
+        <div class="question__grid js-disclosure" data-state="no-js">
           <p class="question__title subtitle">How can I get help if I'm stuck on a Frontend Mentor challenge?</p>
-          <img class="openBtn" src="assets/images/icon-plus.svg" alt="Plus Icon">
-          <img class="closeBtn hidden" src="assets/images/icon-minus.svg" alt="Plus Icon">
-        </div>
-        <p class="text hidden">Frontend Mentor offers realistic coding challenges to help developers improve their
-          frontend coding skills with projects in HTML, CSS, and JavaScript. It's suitable for
-          all levels and ideal for portfolio building.</p>
-      </div>
-    </div>
-  </div>
-  <script src="index.js"></script>
-</body>
+          <button class="disclosure__button js-disclosure-btn" aria-expanded="false" aria-controls="content" disabled title="Waiting for JS to load"><span><svg xmlns="http://www.w3.org/2000/svg" width="30" height="31" fill="none" viewBox="0 0 30 31"> <path fill="#AD28EB" d="M15 3.313A12.187 12.187 0 1 0 27.188 15.5 12.203 12.203 0 0 0 15 3.312Zm4.688 13.124h-3.75v3.75a.938.938 0 0 1-1.876 0v-3.75h-3.75a.938.938 0 0 1 0-1.875h3.75v-3.75a.938.938 0 0 1 1.876 0v3.75h3.75a.938.938 0 0 1 0 1.876Z" /> </svg></button>
+          <!-- <button class="disclosure__button-close"><svg xmlns="http://www.w3.org/2000/svg" width="30" height="31" fill="none" viewBox="0 0 30 31"> <path fill="#301534" d="M15 3.313A12.187 12.187 0 1 0 27.188 15.5 12.2 12.2 0 0 0 15 3.312Zm4.688 13.124h-9.375a.938.938 0 0 1 0-1.875h9.374a.938.938 0 0 1 0 1.876Z" /></svg></button> -->
 
+          <div class="disclosure__content" id="content">
+            <p>Frontend Mentor offers realistic coding challenges to help developers improve their
+              frontend coding skills with projects in HTML, CSS, and JavaScript. It's suitable for
+              all levels and ideal for portfolio building.</p>
+          </div>  
+        </div>
+
+        <div class="line"></div>
+      </div>
+  </div>
+
+  <script src="index.js"></script>
+
+  <noscript>
+    <style>
+      [data-state="no-js"] .disclosure__content {
+        display: block;
+      }
+    </style>
+  </noscript>
+</body>
 </html>
