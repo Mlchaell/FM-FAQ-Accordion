@@ -213,3 +213,7 @@ Helper Classes
     grid-template-columns: 80% 10%;
     row-gap: 1rem;
 }
+
+.flex-row {
+    display: flex;
+}
